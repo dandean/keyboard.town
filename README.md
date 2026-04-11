@@ -81,3 +81,15 @@ Then, in Dokku, add the public key:
 ```sh
 echo "$CONTENTS_OF_YOUR_PUBLIC_SSH_KEY_HERE" | dokku ssh-keys:add KEY_NAME
 ```
+
+## Upgrading Dokku
+
+```sh
+ssh root@keyboard.town
+dokku -v
+
+# Updates Dokku & its dependencies, all enabled plugins and rebuilds all Dokku apps. Optionally installs all other system updates.
+sudo dokku-update run
+
+dokku -v
+```
